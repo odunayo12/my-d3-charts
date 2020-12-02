@@ -19,8 +19,8 @@ const circleComponent = ({
   };
 };
 var render = d3Render.default;
-var height = 100;
-var width = 200;
+var height = 400;
+var width = 700;
 var colours = {
   pink: "#D8352A",
   red: "#D8352A",
@@ -41,13 +41,11 @@ const svg = d3
 const data = [
   circleComponent({
     append: "circle",
-    r: 50,
-    cx: 50,
-    cy: 50,
+    r: 90,
+    cx: 90,
+    cy: 90,
     fill: colours.red
   })
 ];
 
 render(svg, data);
-
-console.log(colours.hyperGreen);

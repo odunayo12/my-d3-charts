@@ -1,6 +1,6 @@
 import * as d3 from "d3";
-import * as d3Render from "d3-render";
-import * as d3format from "d3-format";
+// import * as d3Render from "d3-render";
+// import * as d3format from "d3-format";
 import "jquery";
 
 // // see alternative here
@@ -55,9 +55,7 @@ var simulation = d3
   )
   .force("charge", d3.forceManyBody().strength(-15));
 
-d3.csv("data.csv", types, function (error, graph) {
-  if (error) throw error;
-
+d3.csv("./data/dream.txt").then((graph) => {
   // sort the nodes so that the bigger ones are at the back
   graph = graph.sort(function (a, b) {
     return b.size - a.size;
